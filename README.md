@@ -1,5 +1,5 @@
-# Grid-web-Panel
-- feel free to use this as model, evem the css file has a reset, and media queries desktop first. 
+# Basic-Grid
+- feel free to use this as model, even the css file has a reset, and media queries mobile first. 
 
 ## Screenshots
 ![App Screenshot](screenshot/SCR-20240328-mcac.png)
