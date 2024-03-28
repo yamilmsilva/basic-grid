@@ -1,0 +1,90 @@
+/*=============== FONT ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/*=============== BASE ===============*/
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+  }
+
+/*=============== mobile fisrt ===============*/
+/*=============== setting the grid area ===============*/
+
+  .container{
+    display: grid;
+    grid-template-columns: 1fr;
+        grid-template-rows:  auto minmax(5rem, auto) 1fr minmax(5rem, auto) auto;
+        grid-template-areas: 
+                    "header"
+                    "nav"
+                    "content"
+                    "sidebar"
+                    "footer";
+    
+    min-height: 100vh;
+  }
+
+  header{
+    grid-area: header;
+    padding: 2rem;
+    background-color: #1e293b;
+  }
+
+  nav{
+    grid-area: nav;
+    padding: 2rem;
+    background-color: #334155;
+  }
+
+  main{
+    grid-area: content;
+    padding: 2rem;
+    background-color: #475569;
+  }
+
+  aside{
+    grid-area: sidebar;
+    padding: 2rem;
+    background-color: #64748b;
+  }
+
+  footer{
+    grid-area: footer;
+    padding: 2rem;
+    background-color: #94a3b8;
+  }
+
+/*=============== end grid area ===============*/
+
+
+/*=============== media queries ===============*/
+  @media screen and (min-width: 768px) {
+    .container{
+        grid-template-columns:  16rem 1fr 16rem;
+        grid-template-rows: auto 1fr 1fr auto ;
+        grid-template-areas: 
+                    "header header header"
+                    "nav content content"
+                    "sidebar content content"
+                    "footer footer footer";
+    }
+   
+  }
+
+  @media(min-width: 1024px){
+    .container{
+        grid-template-columns:  16rem 1fr 16rem;
+        grid-template-rows: auto 1fr auto ;
+        grid-template-areas: 
+                    "header header header"
+                    "nav content sidebar"
+                    "footer footer footer";
+    }
+  }
